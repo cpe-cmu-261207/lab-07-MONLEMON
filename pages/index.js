@@ -94,19 +94,18 @@ export default function Home() {
           value={Todotext}
         />
         {/* Todos */}
-        <span className="me-auto">
-          {Todos.map((todo, i) => (
-            <Todo
-              title={todo.title}
-              completed={todo.completed}
-              key={i}
-              onDelete={() => deleteTodo(i)}
-              onMark={() => markTodo(i)}
-              onMoveUp={() => moveUp(i)}
-              onMoveDown={() => moveDown(i)}
-            />
-          ))}
-        </span>
+
+        {Todos.map((todo, i) => (
+          <Todo
+            title={todo.title}
+            completed={todo.completed}
+            key={i}
+            onDelete={() => deleteTodo(i)}
+            onMark={() => markTodo(i)}
+            onMoveUp={() => moveUp(i)}
+            onMoveDown={() => moveDown(i)}
+          />
+        ))}
 
         {/* summary section */}
         <p className="text-center fs-4">

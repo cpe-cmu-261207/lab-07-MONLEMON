@@ -33,7 +33,7 @@ export default function Todo(props) {
             {props.title}
           </span>
           {isMouseOver && (
-            <div className=" p-1 ml-auto fs-2 d-flex gap-2">
+            <>
               <button
                 className="btn btn-success"
                 onClick={() => props.onMark()}
@@ -58,7 +58,7 @@ export default function Todo(props) {
               >
                 <IconTrash />
               </button>
-            </div>
+            </>
           )}
         </div>
       </p>
